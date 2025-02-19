@@ -9,7 +9,7 @@ export type Task = {
     createdAt: string
     updatedAt: string
     publishedAt: string
-    createedBy: ChangingData
+    createdBy: ChangingData
     updatedBy: ChangingData
   }
 }

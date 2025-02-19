@@ -9,6 +9,6 @@ type GetConcreteTaskResponse = {
 }
 
 export const getConcreteTask = async ({ taskId }: GetConcreteTaskPayload): Promise<GetConcreteTaskResponse> => {
-  const response = await fetch(`${BASE_URL}/task/${taskId}`)
+  const response = await fetch(`${BASE_URL}/tasks/${taskId}`)
   return response.json()
 }

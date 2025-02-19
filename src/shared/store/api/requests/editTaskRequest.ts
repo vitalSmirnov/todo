@@ -11,12 +11,14 @@ type EditTaskResponse = {
 }
 
 export const editTaskRequest = async ({ taskId, body }: EditTaskPayload): Promise<EditTaskResponse> => {
-  const response = await fetch(`${BASE_URL}/task/${taskId}`, {
+  const response = await fetch(`${BASE_URL}/tasks/${taskId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify({
+      data: { ...body },
+    }),
   })
   return response.json()
 }
