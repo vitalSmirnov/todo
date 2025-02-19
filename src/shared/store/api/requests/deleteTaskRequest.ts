@@ -6,7 +6,7 @@ type DeleteTaskPayload = {
 type DeleteTaskResponse = {}
 
 export const deleteTaskRequest = async ({ taskId }: DeleteTaskPayload): Promise<DeleteTaskResponse> => {
-  const response = await fetch(`${BASE_URL}/task/${taskId}`, {
+  const response = await fetch(`${BASE_URL}/tasks/${taskId}`, {
     method: 'DELETE',
   })
   return response.json()

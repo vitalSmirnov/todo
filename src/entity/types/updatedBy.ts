@@ -22,6 +22,6 @@ type Attributes = {
 export type ChangingData = {
   data: {
     id: 0
-    attributes: Attributes
+    attributes?: Attributes
   }
 }
